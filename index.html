@@ -1,0 +1,1286 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Consultoria financiera, fiscal y de gestion en Murcia para empresas, autonomos y particulares: direccion financiera, contabilidad, subvenciones, impuestos y patrimonio.">
+<title>JCorreas | Finanzas, consultoría y asesoramiento en Murcia</title>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ProfessionalService",
+  "name": "JCorreas",
+  "founder": {
+    "@type": "Person",
+    "name": "Juan Alberto Correas"
+  },
+  "description": "Consultoría financiera, fiscal y de gestión para empresas, autónomos y particulares: dirección financiera, contabilidad, subvenciones, impuestos, hipotecas y patrimonio.",
+  "areaServed": "ES",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Murcia",
+    "addressCountry": "ES"
+  },
+  "email": "jcorreas.info@gmail.com"
+}
+</script>
+</head>
+<body>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@500&display=swap');
+
+  :root{
+    --bg: #FFFFFF;
+    --surface: #FFFFFF;
+    --surface-alt: #E8EDF2;
+    --ink: #1C2733;
+    --ink-soft: #57636F;
+    --line: #D7DEE6;
+    --primary: #1E4B8F;
+    --primary-dark: #12325F;
+    --primary-tint: #E8EEF8;
+    --accent: #4A7FC9;
+    --accent-dark: #35618F;
+    --shadow: 0 18px 40px -24px rgba(28,39,51,0.18);
+  }
+  :root[data-theme="dark"]{
+    --bg: #10151B;
+    --surface: #1A222B;
+    --surface-alt: #212A34;
+    --ink: #E7ECF2;
+    --ink-soft: #A7B2BD;
+    --line: #2E3944;
+    --primary: #6FA0E8;
+    --primary-dark: #4C7FCB;
+    --primary-tint: #223250;
+    --accent: #8AB4EE;
+    --accent-dark: #6398DE;
+    --shadow: 0 18px 40px -20px rgba(0,0,0,0.55);
+  }
+
+  *{box-sizing:border-box;}
+  body{
+    margin:0;
+    background:var(--bg);
+    color:var(--ink);
+    font-family:'IBM Plex Sans', ui-sans-serif, system-ui, sans-serif;
+    line-height:1.55;
+    -webkit-font-smoothing:antialiased;
+  }
+  h1,h2,h3{
+    font-family:'IBM Plex Serif', ui-serif, Georgia, serif;
+    font-weight:500;
+    text-wrap:balance;
+    margin:0;
+    color:var(--ink);
+  }
+  p{margin:0;}
+  a{color:inherit;}
+  button{font:inherit; color:inherit;}
+  .wrap{max-width:1120px; margin:0 auto; padding:0 28px;}
+
+  .draft-ribbon{
+    background:var(--primary-dark);
+    color:#fff;
+    text-align:center;
+    font-size:0.82rem;
+    letter-spacing:0.02em;
+    padding:9px 16px;
+  }
+
+  header{padding:24px 0 0;}
+  .nav{
+    display:flex; align-items:center; justify-content:space-between; gap:24px;
+    flex-wrap:wrap;
+    padding-bottom:18px;
+  }
+  .logo-text{ font-family:'IBM Plex Sans', sans-serif; font-weight:800; font-size:1.3rem; letter-spacing:-0.01em; display:inline-flex; align-items:baseline; }
+  .logo-text .accent{color:var(--accent);}
+  .logo-text .main{color:var(--primary-dark);}
+  .logo-lockup{display:flex; flex-direction:column; gap:2px; line-height:1;}
+  .logo-mark{ height:36px; width:auto; flex-shrink:0; display:block; }
+  .brand-line{display:flex; align-items:center; gap:10px;}
+  .foot-row .logo-mark, .contact-brand .logo-mark{height:28px;}
+  .logo-caption{
+    font-family:'IBM Plex Mono', monospace; font-size:0.58rem; letter-spacing:0.04em;
+    text-transform:uppercase; color:var(--ink-soft); white-space:nowrap;
+  }
+  .tab-nav-wrap{position:relative; max-width:100%;}
+  .tab-nav{
+    display:flex; gap:6px; background:var(--surface-alt);
+    border:1px solid var(--line); border-radius:999px; padding:4px;
+    max-width:100%; overflow-x:auto; -webkit-overflow-scrolling:touch;
+    scrollbar-width:none;
+  }
+  .tab-nav::-webkit-scrollbar{display:none;}
+  @media (max-width:860px){
+    .tab-nav-wrap{padding-right:24px;}
+    .tab-nav-wrap::after{
+      content:"\203A";
+      position:absolute; top:50%; right:-10px; transform:translateY(-50%);
+      width:42px; height:42px; border-radius:50%;
+      background:var(--primary); color:#fff;
+      display:flex; align-items:center; justify-content:center;
+      font-size:1.7rem; font-weight:700; line-height:1;
+      box-shadow:0 3px 10px rgba(28,39,51,0.4);
+      pointer-events:none;
+    }
+  }
+  .tab-nav button{
+    border:none; background:transparent; cursor:pointer;
+    padding:9px 20px; border-radius:999px; white-space:nowrap; flex-shrink:0;
+    font-size:0.92rem; font-weight:600; color:var(--ink-soft);
+    transition:background .15s, color .15s;
+  }
+  .tab-nav button:hover{color:var(--ink);}
+  .tab-nav button[aria-selected="true"]{
+    background:var(--primary); color:#fff;
+  }
+  .btn{
+    display:inline-flex; align-items:center; gap:8px;
+    background:var(--primary); color:#fff;
+    padding:11px 20px; border-radius:8px;
+    text-decoration:none; font-weight:600; font-size:0.92rem;
+    border:1px solid var(--primary);
+    cursor:pointer;
+    transition:background .15s, transform .15s;
+  }
+  .btn:hover{background:var(--primary-dark); transform:translateY(-1px);}
+  .btn.ghost{background:transparent; color:var(--primary); border:1px solid var(--primary);}
+  .btn.ghost:hover{background:var(--primary-tint);}
+
+  [hidden]{display:none !important;}
+
+  .hero{
+    padding:44px 0 56px;
+    display:grid;
+    grid-template-columns:1.15fr 0.85fr;
+    gap:48px;
+    align-items:start;
+  }
+  .eyebrow{
+    font-family:'IBM Plex Mono', monospace;
+    font-size:0.78rem;
+    letter-spacing:0.09em;
+    text-transform:uppercase;
+    color:var(--primary);
+    margin-bottom:14px;
+    display:block;
+  }
+  .hero h1{font-size:clamp(2.1rem, 3.6vw, 3.05rem); line-height:1.12;}
+  .hero h1 em{font-style:normal; color:var(--primary);}
+  .hero p.lead{margin-top:20px; font-size:1.1rem; color:var(--ink-soft); text-align:justify;}
+  .hero .actions{margin-top:30px; display:flex; gap:14px; flex-wrap:wrap;}
+
+  .hero-card{
+    background:var(--surface); border:1px solid var(--line); border-radius:16px;
+    padding:26px; box-shadow:var(--shadow);
+  }
+  .hero-card .row{
+    display:flex; justify-content:space-between; align-items:baseline;
+    padding:13px 0; border-bottom:1px solid var(--line); font-size:0.94rem; gap:16px;
+  }
+  .hero-card .row:last-child{border-bottom:none;}
+  .hero-card .row span:first-child{color:var(--ink-soft); flex-shrink:0;}
+  .hero-card .row span:last-child{
+    font-family:'IBM Plex Mono', monospace; font-weight:500;
+  }
+  .hero-card .cap{
+    font-family:'IBM Plex Serif', ui-serif, Georgia, serif; font-size:1.15rem; font-weight:600;
+    color:var(--ink); margin-bottom:18px;
+  }
+  .benefit-list{list-style:none; margin:0; padding:0; display:flex; flex-direction:column; gap:16px;}
+  .benefit-list li{display:flex; gap:12px; align-items:flex-start; font-size:0.96rem; line-height:1.4;}
+  .benefit-list .check{
+    flex-shrink:0; width:22px; height:22px; border-radius:50%;
+    background:#fff; color:var(--primary); border:2px solid var(--primary);
+    display:flex; align-items:center; justify-content:center;
+    font-size:0.74rem; font-weight:700; margin-top:1px;
+  }
+
+  section{padding:52px 0;}
+  .section-head{max-width:62ch; margin-bottom:32px;}
+  .section-head h2{font-size:clamp(1.6rem, 2.4vw, 2.05rem);}
+  .section-head p{color:var(--ink-soft); margin-top:12px; font-size:1.02rem; text-wrap:pretty;}
+
+  .about{background:var(--surface-alt); border-radius:18px; padding:36px 40px;}
+  .about-grid{display:grid; grid-template-columns:0.9fr 1.1fr; gap:44px; align-items:start;}
+  .credentials{display:flex; flex-direction:column;}
+  .credentials .item{padding:14px 0; border-bottom:1px solid var(--line); display:flex; gap:14px; align-items:baseline;}
+  .credentials .item:first-child{padding-top:0;}
+  .credentials .item:last-child{border-bottom:none;}
+  .credentials .item .num{font-family:'IBM Plex Mono', monospace; color:var(--primary); font-weight:500; font-size:0.95rem; min-width:2.4em;}
+  .credentials .item span:last-child{color:var(--ink-soft); font-size:0.95rem;}
+  .about-copy p{margin-bottom:16px; color:var(--ink-soft);}
+  .about-copy p:last-child{margin-bottom:0;}
+  .about-copy strong{color:var(--ink); font-weight:600;}
+  .about-copy-wide{max-width:none; font-size:1.04rem;}
+  .about-copy-wide p{text-align:justify;}
+  .about-copy-wide p:first-child{color:var(--ink); font-size:1.12rem;}
+  .about-copy-wide p:last-child{color:var(--primary); font-size:1.08rem; text-align:left;}
+  .about-caption{
+    font-family:'IBM Plex Mono', monospace; font-size:0.78rem; letter-spacing:0.05em;
+    color:var(--primary) !important; margin-top:10px !important; text-transform:uppercase;
+  }
+
+  .mission-statement{
+    font-family:'IBM Plex Serif', ui-serif, Georgia, serif; font-weight:500;
+    font-size:clamp(1.15rem, 1.8vw, 1.4rem); line-height:1.45; color:var(--ink);
+    max-width:none; text-align:justify; margin-bottom:36px;
+  }
+  .values-grid{display:grid; grid-template-columns:repeat(3, 1fr); gap:22px;}
+  .value{background:var(--surface); border:1px solid var(--line); border-radius:14px; padding:22px;}
+  .value-icon{
+    width:44px; height:44px; border-radius:50%; background:#fff; color:var(--primary);
+    border:2px solid var(--primary);
+    display:flex; align-items:center; justify-content:center; margin-bottom:14px;
+  }
+  .value-icon svg{width:22px; height:22px;}
+  .value h4{font-size:1.05rem; margin-bottom:8px; font-family:'IBM Plex Sans',sans-serif; font-weight:700;}
+  .value p{color:var(--ink-soft); font-size:0.93rem; text-align:justify;}
+
+  .process{display:grid; grid-template-columns:repeat(3, 1fr); gap:22px;}
+  .step{background:var(--surface); border:1px solid var(--line); border-radius:14px; padding:22px;}
+  .step-num{
+    width:40px; height:40px; border-radius:50%; background:#fff; color:var(--primary);
+    border:2px solid var(--primary);
+    display:flex; align-items:center; justify-content:center; margin-bottom:14px;
+    font-family:'IBM Plex Mono', monospace; font-weight:600; font-size:1rem;
+  }
+  .step h4{font-size:1.05rem; margin-bottom:8px; font-family:'IBM Plex Sans',sans-serif; font-weight:700;}
+  .step p{color:var(--ink-soft); font-size:0.93rem;}
+
+  .mini-group{margin-bottom:30px;}
+  .mini-group:last-of-type{margin-bottom:0;}
+  .mini-group-title{
+    font-family:'IBM Plex Serif', ui-serif, Georgia, serif; font-weight:600; font-size:1.5rem;
+    color:var(--ink); margin-bottom:18px; padding-bottom:10px; border-bottom:2px solid var(--primary);
+  }
+  .mini-grid{display:grid; grid-template-columns:repeat(auto-fit, minmax(240px, 1fr)); gap:16px;}
+  .mini-card{
+    background:var(--surface); border:1px solid var(--line); border-radius:12px; padding:18px;
+    display:flex; flex-direction:column; gap:6px;
+  }
+  .mini-card .mini-head{display:flex; align-items:center; gap:8px; flex-wrap:wrap;}
+  .mini-card h4{font-family:'IBM Plex Sans', sans-serif; font-weight:700; font-size:0.98rem;}
+  .mini-card p{color:var(--ink-soft); font-size:0.88rem;}
+  .tag-diff{
+    font-family:'IBM Plex Mono', monospace; font-size:0.65rem; letter-spacing:0.06em;
+    text-transform:uppercase; color:var(--accent-dark); background:var(--primary-tint);
+    border:1px solid var(--accent); border-radius:5px; padding:2px 7px; white-space:nowrap;
+  }
+  .tag-star{color:var(--accent-dark); font-size:0.85rem; line-height:1;}
+  .cta-row{margin-top:30px; display:flex; align-items:center; gap:16px; flex-wrap:wrap;}
+
+  .contact-teaser{
+    background:var(--primary); color:#fff; border-radius:18px; padding:36px;
+    display:flex; justify-content:space-between; align-items:center; gap:24px; flex-wrap:wrap;
+  }
+  .contact-teaser h3{color:#fff; font-size:1.4rem;}
+  .contact-teaser p{color:rgba(255,255,255,0.85); margin-top:8px; max-width:44ch;}
+  .contact-teaser .btn{background:#fff; color:var(--primary-dark); border-color:#fff;}
+  .contact-teaser .btn:hover{background:var(--primary-tint);}
+
+  .teaser-strip{
+    background:var(--surface); border:1px solid var(--line); border-radius:18px; padding:28px 32px;
+    display:flex; justify-content:space-between; align-items:center; gap:24px; flex-wrap:wrap;
+  }
+  .teaser-strip p{margin:0; flex:1 1 380px; max-width:640px; font-size:1.02rem; color:var(--ink); font-family:'IBM Plex Serif', ui-serif, Georgia, serif; text-wrap:pretty;}
+  .teaser-strip .btn{flex-shrink:0;}
+
+  /* Servicios tab: selector de perfil + acordeón */
+  .services-switch{
+    display:flex; gap:6px; background:var(--surface-alt);
+    border:1px solid var(--line); border-radius:999px; padding:4px;
+    max-width:460px; margin-bottom:28px;
+  }
+  .services-switch button{
+    flex:1; border:none; background:transparent; cursor:pointer;
+    padding:10px 18px; border-radius:999px; white-space:nowrap;
+    font-size:0.92rem; font-weight:600; color:var(--ink-soft);
+    transition:background .15s, color .15s;
+  }
+  .services-switch button:hover{color:var(--ink);}
+  .services-switch button[aria-selected="true"]{background:var(--primary); color:#fff;}
+
+  .service-group{
+    background:var(--surface); border:1px solid var(--line); border-radius:14px;
+    margin-bottom:20px; overflow:hidden;
+  }
+  .service-group > summary.group-summary{
+    list-style:none; cursor:pointer; padding:22px 24px;
+    display:flex; align-items:center; justify-content:space-between; gap:16px;
+    background:var(--primary-tint);
+  }
+  .service-group > summary.group-summary::-webkit-details-marker{display:none;}
+  .group-title{font-family:'IBM Plex Serif', ui-serif, Georgia, serif; font-size:1.25rem; font-weight:500;}
+  .service-group[open] > summary.group-summary{border-bottom:1px solid var(--line);}
+  .service-group > summary .acc-icon{transition:transform .18s;}
+  .service-group[open] > summary .acc-icon{transform:rotate(45deg);}
+  .group-body{padding:20px 20px 8px;}
+  .group-body .service-acc{margin-bottom:12px;}
+  .group-body .service-acc:last-child{margin-bottom:0;}
+
+  .article-grid{display:grid; grid-template-columns:repeat(auto-fit, minmax(250px, 1fr)); gap:18px;}
+  .article-card{
+    background:var(--surface); border:1px solid var(--line); border-radius:14px;
+    padding:22px; display:flex; flex-direction:column; gap:10px;
+    cursor:pointer; text-align:left; width:100%; font:inherit; color:inherit;
+    transition:border-color .15s, box-shadow .15s;
+  }
+  .article-card:hover{border-color:var(--primary); box-shadow:var(--shadow);}
+  .article-card h4{font-family:'IBM Plex Sans', sans-serif; font-weight:700; font-size:1.02rem;}
+  .article-card p{color:var(--ink-soft); font-size:0.9rem; text-align:justify;}
+  .article-card .read-more{
+    margin-top:auto; padding-top:4px; color:var(--primary); font-weight:600; font-size:0.86rem;
+  }
+  .tag-example{
+    align-self:flex-start;
+    font-family:'IBM Plex Mono', monospace; font-size:0.65rem; letter-spacing:0.06em;
+    text-transform:uppercase; color:var(--ink-soft); background:var(--surface-alt);
+    border:1px solid var(--line); border-radius:5px; padding:2px 7px;
+  }
+
+  .article-back{
+    display:inline-flex; align-items:center; gap:6px; background:none; border:none; cursor:pointer;
+    color:var(--primary); font-weight:600; font-size:0.9rem; font-family:inherit; padding:0; margin-bottom:22px;
+  }
+  .article-back:hover{text-decoration:underline;}
+  .article-full{max-width:72ch;}
+  .article-full .tag-example{margin-bottom:14px;}
+  .article-full h2{font-size:clamp(1.5rem, 2.2vw, 1.9rem); margin-bottom:8px;}
+  .article-full .article-updated{
+    font-family:'IBM Plex Mono', monospace; font-size:0.75rem; color:var(--ink-soft); margin-bottom:26px; display:block;
+  }
+  .article-body h3{font-size:1.15rem; margin:26px 0 10px; font-family:'IBM Plex Sans',sans-serif; font-weight:700;}
+  .article-body p{color:var(--ink); margin-bottom:14px; text-align:justify;}
+  .article-body ul{margin:0 0 14px; padding-left:20px; display:flex; flex-direction:column; gap:6px; color:var(--ink);}
+  .article-body li::marker{color:var(--accent);}
+  .article-body .note{
+    background:var(--primary-tint); border-radius:10px; padding:14px 16px; font-size:0.9rem;
+    color:var(--ink); margin:18px 0;
+  }
+
+  .service-acc{
+    background:var(--surface); border:1px solid var(--line); border-radius:12px;
+    margin-bottom:12px; overflow:hidden;
+  }
+  .service-acc summary{
+    list-style:none; cursor:pointer; padding:18px 20px;
+    display:flex; align-items:center; justify-content:space-between; gap:16px;
+  }
+  .service-acc summary::-webkit-details-marker{display:none;}
+  .acc-title{display:flex; align-items:center; gap:10px; flex-wrap:wrap; font-weight:700; font-size:1rem;}
+  .acc-icon{
+    font-family:'IBM Plex Mono', monospace; font-size:1.1rem; color:var(--primary);
+    transition:transform .18s; flex-shrink:0;
+  }
+  .service-acc[open] .acc-icon{transform:rotate(45deg);}
+  .acc-body{padding:0 20px 20px; color:var(--ink-soft); font-size:0.93rem;}
+  .acc-body p{margin-bottom:10px; text-align:justify;}
+  .acc-body ul{margin:0; padding-left:18px; display:flex; flex-direction:column; gap:6px;}
+  .acc-body li::marker{color:var(--accent);}
+
+  .contact{background:var(--surface-alt);}
+  .contact-grid{display:grid; grid-template-columns:1fr 1fr; gap:36px; align-items:start;}
+  .contact-copy p{color:var(--ink-soft); margin-top:14px; max-width:44ch;}
+  .placeholder-list{margin-top:26px; display:flex; flex-direction:column; gap:12px;}
+  .placeholder{
+    border:1px solid var(--line); border-radius:10px; padding:14px 16px;
+    display:flex; align-items:center; gap:14px; background:var(--surface);
+    text-decoration:none; transition:border-color .15s;
+  }
+  a.placeholder:hover{border-color:var(--primary);}
+  .placeholder-icon{
+    flex-shrink:0; width:38px; height:38px; border-radius:50%;
+    background:var(--primary-tint); color:var(--primary);
+    display:flex; align-items:center; justify-content:center;
+  }
+  .placeholder-icon svg{width:18px; height:18px;}
+  .placeholder-text{display:flex; flex-direction:column; gap:2px;}
+  .placeholder .label, .placeholder .pv-value{text-decoration:none;}
+  .placeholder .label{font-family:'IBM Plex Mono', monospace; font-size:0.75rem; letter-spacing:0.06em; text-transform:uppercase; color:var(--ink-soft);}
+  .placeholder .pv-value{color:var(--ink); font-weight:600; font-size:0.92rem;}
+  a.placeholder .pv-value{color:var(--primary);}
+
+  .contact-brand{
+    margin-top:28px; padding:22px; border-radius:12px; border:1px solid var(--line);
+    background:var(--surface); display:flex; flex-direction:column; align-items:flex-start; gap:12px;
+  }
+  .contact-brand p{color:var(--ink-soft); font-size:0.88rem; max-width:36ch; margin:0;}
+
+  .form-card{background:var(--surface); border:1px solid var(--line); border-radius:16px; padding:26px; box-shadow:var(--shadow);}
+  .form-card .cap{font-family:'IBM Plex Mono', monospace; font-size:0.72rem; letter-spacing:0.08em; text-transform:uppercase; color:var(--ink-soft); margin-bottom:16px;}
+  .field{margin-bottom:16px;}
+  .field label{display:block; font-size:0.86rem; font-weight:600; margin-bottom:6px;}
+  .field input, .field select, .field textarea{
+    width:100%; border:1px solid var(--line); border-radius:8px; padding:10px 12px;
+    background:var(--bg); color:var(--ink); font-family:inherit; font-size:0.95rem;
+  }
+  .field textarea{resize:vertical; min-height:84px;}
+  .form-note{font-size:0.82rem; color:var(--ink-soft); margin-top:14px;}
+
+  footer{padding:30px 0 40px; border-top:1px solid var(--line);}
+  .foot-row{display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:12px; font-size:0.85rem; color:var(--ink-soft);}
+  .foot-row .logo-text{font-size:1.05rem;}
+
+  @media (max-width: 860px){
+    .hero{grid-template-columns:1fr;}
+    .about-grid{grid-template-columns:1fr;}
+    .values-grid{grid-template-columns:1fr;}
+    .process{grid-template-columns:1fr;}
+    .contact-grid{grid-template-columns:1fr;}
+    .nav{flex-direction:column; align-items:flex-start;}
+  }
+  @media (prefers-reduced-motion: reduce){ *{transition:none !important;} }
+</style>
+
+<header>
+  <div class="wrap nav">
+    <div class="brand-line">
+      <img class="logo-mark" src="data:image/png;base64,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" alt="JCorreas">
+      <div class="logo-lockup">
+        <span class="logo-text"><span class="accent">J</span><span class="main">Correas</span></span>
+        <span class="logo-caption">Finanzas · Consultoría · Asesoramiento</span>
+      </div>
+    </div>
+    <div class="tab-nav-wrap">
+      <div class="tab-nav" role="tablist" aria-label="Secciones">
+        <button type="button" role="tab" data-tab="inicio" aria-selected="true">Inicio</button>
+        <button type="button" role="tab" data-tab="nosotros" aria-selected="false">Quiénes somos</button>
+        <button type="button" role="tab" data-tab="servicios" aria-selected="false">Servicios</button>
+        <button type="button" role="tab" data-tab="actualidad" aria-selected="false">Actualidad</button>
+        <button type="button" role="tab" data-tab="contacto" aria-selected="false">Contacto</button>
+      </div>
+    </div>
+  </div>
+</header>
+
+<main class="wrap">
+
+  <!-- ===== INICIO ===== -->
+  <div class="tab-panel" id="panel-inicio" role="tabpanel">
+    <section class="hero" style="padding-top:12px;">
+      <div>
+        <span class="eyebrow">Consultoría financiera y fiscal</span>
+        <h1>Números claros para decisiones que <em>no admiten letra pequeña.</em></h1>
+        <p class="lead">Experiencia en banca, consultoría financiera y dirección financiera, ahora al servicio de empresas, autónomos y particulares. No somos una asesoría ni una gestoría: somos un equipo altamente cualificado que ofrece un servicio 360º completamente personalizado.</p>
+        <div class="actions">
+          <button type="button" class="btn" data-tab="contacto">Cuéntanos tu caso</button>
+          <button type="button" class="btn ghost" data-tab="servicios">Ver servicios</button>
+        </div>
+      </div>
+      <div class="hero-card">
+        <div class="cap">Por qué JCorreas</div>
+        <ul class="benefit-list">
+          <li><span class="check">✓</span>Experiencia en consultoría financiera y dirección financiera, puesta al servicio de tu negocio.</li>
+          <li><span class="check">✓</span>Un único interlocutor de principio a fin.</li>
+          <li><span class="check">✓</span>Nada de paquetes cerrados: cada plan se hace a medida de tu caso.</li>
+          <li><span class="check">✓</span>Presenciales en Murcia, online para el resto de España.</li>
+          <li><span class="check">✓</span>Te ayudamos a incorporar IA en los procesos de gestión de tu negocio, para que ganes tiempo y tomes mejores decisiones.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="nosotros-teaser">
+      <div class="teaser-strip">
+        <p><strong>Ponemos nuestra experiencia y criterio profesional a tu servicio para ayudarte a gestionar, planificar y tomar mejores decisiones, tanto en tu negocio como en tu ámbito personal.</strong></p>
+        <button type="button" class="btn ghost" data-tab="nosotros">Conócenos mejor</button>
+      </div>
+    </section>
+
+    <section id="servicios-resumen">
+      <div class="section-head">
+        <h2>Nuestros principales servicios</h2>
+      </div>
+
+      <div class="mini-group">
+        <h3 class="mini-group-title">Empresas</h3>
+        <div class="mini-grid">
+          <div class="mini-card">
+            <div class="mini-head"><h4>Dirección financiera / controller</h4><span class="tag-diff">Diferencial</span></div>
+            <p>Seguimiento económico-financiero mensual: sabes si tu empresa gana dinero y en qué líneas.</p>
+          </div>
+          <div class="mini-card">
+            <div class="mini-head"><h4>Contabilidad financiera y analítica</h4></div>
+            <p>Llevanza contable al día y análisis de qué parte de tu negocio es realmente rentable.</p>
+          </div>
+          <div class="mini-card">
+            <div class="mini-head"><h4>Subvenciones y ayudas</h4></div>
+            <p>Kit Digital, ayudas autonómicas y estatales, sin dejar pasar un plazo.</p>
+          </div>
+          <div class="mini-card">
+            <div class="mini-head"><h4>Licitaciones y coordinación de proyectos</h4></div>
+            <p>Preparamos tu oferta en licitaciones y coordinamos proyectos puntuales (como una venta de empresa), gestionando documentación y comunicación con la otra parte.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="mini-group">
+        <h3 class="mini-group-title">Autónomos</h3>
+        <div class="mini-grid">
+          <div class="mini-card">
+            <div class="mini-head"><h4>Asesoría</h4></div>
+            <p>Alta, gestión del día a día y las decisiones importantes, resueltas contigo.</p>
+          </div>
+          <div class="mini-card">
+            <div class="mini-head"><h4>Impuestos</h4></div>
+            <p>IVA, IRPF y Declaración de la Renta, sin sorpresas ni plazos perdidos.</p>
+          </div>
+          <div class="mini-card">
+            <div class="mini-head"><h4>Dirección financiera / controller financiero</h4><span class="tag-diff">Diferencial</span></div>
+            <p>El control financiero que necesitas para crecer, sin contratar a nadie.</p>
+          </div>
+          <div class="mini-card">
+            <div class="mini-head"><h4>Contabilidad financiera y analítica</h4></div>
+            <p>Llevanza contable al día y análisis de dónde ganas dinero de verdad.</p>
+          </div>
+          <div class="mini-card">
+            <div class="mini-head"><h4>Subvenciones y ayudas</h4></div>
+            <p>Kit Digital, bonificaciones de cuota y ayudas autonómicas compatibles con tu actividad.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="mini-group">
+        <h3 class="mini-group-title">Particulares</h3>
+        <div class="mini-grid">
+          <div class="mini-card">
+            <div class="mini-head"><h4>Subvenciones y ayudas</h4></div>
+            <p>Ayudas públicas para vivienda, familia y formación, sin dejar pasar un plazo.</p>
+          </div>
+          <div class="mini-card">
+            <div class="mini-head"><h4>Impuestos</h4></div>
+            <p>Tu Declaración de la Renta, sin sorpresas ni plazos perdidos.</p>
+          </div>
+          <div class="mini-card">
+            <div class="mini-head"><h4>Hipotecas</h4></div>
+            <p>Movemos tu hipoteca entre nuestra red de bancos colaboradores para conseguirte mejores condiciones.</p>
+          </div>
+          <div class="mini-card">
+            <div class="mini-head"><h4>Patrimonio y familia</h4></div>
+            <p>Herencias, régimen matrimonial, donaciones y préstamos entre familiares.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="cta-row">
+        <button type="button" class="btn" data-tab="servicios">Ver todos los servicios</button>
+      </div>
+    </section>
+
+    <section id="inicio-contacto-teaser">
+      <div class="contact-teaser">
+        <div>
+          <h3>¿Hablamos?</h3>
+          <p>Cuéntanos en qué punto estás y qué necesitas resolver - sin compromiso.</p>
+        </div>
+        <button type="button" class="btn" data-tab="contacto">Ir a contacto</button>
+      </div>
+    </section>
+  </div>
+
+  <!-- ===== QUIÉNES SOMOS ===== -->
+  <div class="tab-panel" id="panel-nosotros" role="tabpanel" hidden>
+    <section style="padding-top:36px;">
+      <div class="section-head" style="margin-bottom:24px;">
+        <h2>Quiénes somos</h2>
+        <p>Lo que hay detrás de JCorreas.</p>
+      </div>
+      <div class="about-copy about-copy-wide">
+        <p>En <strong>JCorreas</strong> ponemos nuestra experiencia económica, fiscal y financiera al servicio de empresas, autónomos y particulares. Ayudamos a gestionar el día a día, resolver dudas y tomar decisiones con mayor seguridad, ofreciendo soluciones adaptadas a cada situación.</p>
+        <p>Contamos con experiencia en banca, consultoría financiera para pymes y autónomos y dirección financiera en grupos empresariales, además de formación en Derecho y Administración y Dirección de Empresas. Esta combinación nos permite abordar cada caso desde una visión global, teniendo en cuenta tanto las necesidades del día a día como las decisiones que pueden marcar el futuro económico de nuestros clientes.</p>
+        <p>No somos una asesoría ni una gestoría al uso. Nos implicamos en cada caso, con un trato cercano y profesional, acompañándote desde las gestiones más habituales hasta las decisiones económicas más importantes.</p>
+        <p><strong>Tu tranquilidad financiera empieza con buenas decisiones.</strong></p>
+      </div>
+    </section>
+
+    <section id="mision-valores">
+      <div class="section-head">
+        <h2>Misión y valores</h2>
+      </div>
+      <p class="mission-statement">Nuestra misión es que nuestros clientes estén tranquilos: que una empresa pueda centrarse en hacer crecer su negocio, y que un particular pueda tomar decisiones importantes, sin preocuparse por lo financiero, lo fiscal o lo legal - porque de eso nos encargamos nosotros.</p>
+      <div class="values-grid">
+        <div class="value">
+          <span class="value-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m15.477 12.89 1.515 8.526a.5.5 0 0 1-.81.47l-3.58-2.687a1 1 0 0 0-1.197 0l-3.586 2.686a.5.5 0 0 1-.81-.469l1.514-8.526"/><circle cx="12" cy="8" r="6"/></svg></span>
+          <h4>Excelencia</h4>
+          <p>Cada cifra, cada plazo y cada documento se revisan con el mismo rigor con el que se dirige una gran empresa.</p>
+        </div>
+        <div class="value">
+          <span class="value-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m11 17 2 2a1 1 0 1 0 3-3"/><path d="m14 14 2.5 2.5a1 1 0 1 0 3-3l-3.88-3.88a3 3 0 0 0-4.24 0l-.88.88a1 1 0 1 1-3-3l2.81-2.81a5.79 5.79 0 0 1 7.06-.87l.47.28a2 2 0 0 0 1.42.25L21 4"/><path d="m21 3 1 11h-2"/><path d="M3 3 2 14l6.5 6.5a1 1 0 1 0 3-3"/><path d="M3 4h8"/></svg></span>
+          <h4>Compromiso</h4>
+          <p>No desaparecemos después de la primera reunión: acompañamos cada caso hasta que está resuelto de verdad.</p>
+        </div>
+        <div class="value">
+          <span class="value-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 22a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h8a2.4 2.4 0 0 1 1.704.706l3.588 3.588A2.4 2.4 0 0 1 20 8v12a2 2 0 0 1-2 2z"/><path d="M14 2v5a1 1 0 0 0 1 1h5"/><path d="m9 15 2 2 4-4"/></svg></span>
+          <h4>Transparencia</h4>
+          <p>Sin letra pequeña ni sorpresas: sabes en todo momento qué se está haciendo, por qué, y qué cuesta.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="como-trabajamos">
+      <div class="section-head">
+        <h2>Cómo trabajamos</h2>
+        <p>Tres pasos, sin humo intermedio.</p>
+      </div>
+      <div class="process">
+        <div class="step">
+          <span class="step-num">1</span>
+          <h4>Diagnóstico inicial</h4>
+          <p>Una conversación a fondo sobre tu situación real: cuentas, plazos, y qué es lo que de verdad hay que resolver primero.</p>
+        </div>
+        <div class="step">
+          <span class="step-num">2</span>
+          <h4>Plan a medida</h4>
+          <p>Qué se hace, en qué orden y con qué coste - sin paquetes cerrados que no encajan con tu caso.</p>
+        </div>
+        <div class="step">
+          <span class="step-num">3</span>
+          <h4>Acompañamiento</h4>
+          <p>Ejecución y seguimiento continuo, con el mismo interlocutor de principio a fin - nunca un cambio de equipo a mitad de camino.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="nosotros-contacto-teaser">
+      <div class="contact-teaser">
+        <div>
+          <h3>¿Hablamos?</h3>
+          <p>Cuéntanos en qué punto estás y qué necesitas resolver - sin compromiso.</p>
+        </div>
+        <button type="button" class="btn" data-tab="contacto">Ir a contacto</button>
+      </div>
+    </section>
+  </div>
+
+  <!-- ===== SERVICIOS ===== -->
+  <div class="tab-panel" id="panel-servicios" role="tabpanel" hidden>
+    <section style="padding-top:36px;">
+      <div class="section-head">
+        <h2>Servicios</h2>
+        <p>Todo lo que hacemos, sin letra pequeña. Elige tu perfil para ver el detalle.</p>
+      </div>
+
+      <div class="services-switch" role="tablist" aria-label="Perfil">
+        <button type="button" data-service-group="empresas" aria-selected="true">Empresas</button>
+        <button type="button" data-service-group="autonomos" aria-selected="false">Autónomos</button>
+        <button type="button" data-service-group="particulares" aria-selected="false">Particulares</button>
+      </div>
+
+      <div class="service-group-panel" data-group="empresas">
+
+        <details class="service-acc" open>
+          <summary>
+            <span class="acc-title">Dirección financiera / controller <span class="tag-diff">Diferencial</span></span>
+            <span class="acc-icon">+</span>
+          </summary>
+          <div class="acc-body">
+            <p>No todas las empresas necesitan un director financiero a tiempo completo, pero sí uno excelente y adaptado a sus necesidades: seguimiento económico-financiero mensual, para que sepas en todo momento si tu empresa gana dinero y en qué líneas de negocio.</p>
+            <ul>
+              <li>Seguimiento económico-financiero mensual</li>
+              <li>Presupuestos y cuadros de mando</li>
+              <li>Diagnóstico económico y organizativo</li>
+              <li>Consultoría de procesos internos y estrategia de crecimiento</li>
+              <li>Control y previsión de tesorería</li>
+              <li>Negociación de financiación y relación bancaria</li>
+              <li>Acompañamiento en el día a día: desde qué cuenta bancaria abrir hasta qué software de gestión utilizar</li>
+            </ul>
+          </div>
+        </details>
+
+        <details class="service-acc" open>
+          <summary>
+            <span class="acc-title">Contabilidad financiera y analítica</span>
+            <span class="acc-icon">+</span>
+          </summary>
+          <div class="acc-body">
+            <p>No solo contabilidad financiera: también analítica, para saber qué parte de tu negocio es realmente rentable.</p>
+            <ul>
+              <li>Llevanza contable al día (asientos, conciliaciones bancarias, libros oficiales)</li>
+              <li>Contabilidad analítica por proyecto, línea de negocio o centro de coste</li>
+              <li>Cierres mensuales y anuales</li>
+            </ul>
+          </div>
+        </details>
+
+        <details class="service-acc" open>
+          <summary>
+            <span class="acc-title">Subvenciones y ayudas</span>
+            <span class="acc-icon">+</span>
+          </summary>
+          <div class="acc-body">
+            <p>Identificamos las ayudas a las que puedes acceder y nos encargamos del expediente de principio a fin.</p>
+            <ul>
+              <li>Kit Digital, cuotas bonificadas, ayudas autonómicas y estatales</li>
+              <li>Identificación de convocatorias aplicables a tu empresa</li>
+              <li>Preparación, presentación y seguimiento del expediente</li>
+            </ul>
+          </div>
+        </details>
+
+        <details class="service-acc" open>
+          <summary>
+            <span class="acc-title">Licitaciones y coordinación de proyectos</span>
+            <span class="acc-icon">+</span>
+          </summary>
+          <div class="acc-body">
+            <p>La contratación pública exige rigor y plazos exactos. Nos encargamos del estudio económico y de la documentación del expediente. También coordinamos proyectos puntuales de tu empresa, como un proceso de venta, encargándonos de toda la gestión documental y de la comunicación con la otra parte (comprador, due diligence) para que tú te centres en el negocio.</p>
+            <ul>
+              <li>Estudio económico y oferta económica en licitaciones</li>
+              <li>Documentación administrativa y financiera del expediente</li>
+              <li>Coordinación con el resto de asesores (legal, técnico)</li>
+              <li>Coordinación de proyectos puntuales: gestión documental y comunicación con la contraparte (venta de empresa, due diligence, procesos de inversión...)</li>
+            </ul>
+          </div>
+        </details>
+
+      </div>
+
+      <div class="service-group-panel" data-group="autonomos" hidden>
+
+        <details class="service-acc" open>
+          <summary>
+            <span class="acc-title">Asesoría</span>
+            <span class="acc-icon">+</span>
+          </summary>
+          <div class="acc-body">
+            <p>Desde el momento del alta hasta cualquier duda del día a día: un interlocutor que conoce tu actividad y te acompaña.</p>
+            <ul>
+              <li>Momento y vía de alta más ventajosa (capitalización del paro, pluriactividad, baja voluntaria)</li>
+              <li>Tarifa plana y bonificaciones de cuota</li>
+              <li>Resolución de dudas del día a día</li>
+            </ul>
+          </div>
+        </details>
+
+        <details class="service-acc" open>
+          <summary>
+            <span class="acc-title">Impuestos</span>
+            <span class="acc-icon">+</span>
+          </summary>
+          <div class="acc-body">
+            <p>Tus obligaciones fiscales al día y revisadas para pagar lo justo, nunca de más.</p>
+            <ul>
+              <li>Declaraciones trimestrales y anuales (IVA, IRPF)</li>
+              <li>Declaración de la Renta</li>
+              <li>Planificación y revisión fiscal</li>
+            </ul>
+          </div>
+        </details>
+
+        <details class="service-acc" open>
+          <summary>
+            <span class="acc-title">Dirección financiera / controller financiero <span class="tag-diff">Diferencial</span></span>
+            <span class="acc-icon">+</span>
+          </summary>
+          <div class="acc-body">
+            <p>Seguimiento mensual de tu negocio para que tomes decisiones con datos, no a ciegas.</p>
+            <ul>
+              <li>Seguimiento económico-financiero mensual</li>
+              <li>Presupuestos y previsión de tesorería</li>
+              <li>Rentabilidad por línea de negocio o cliente</li>
+            </ul>
+          </div>
+        </details>
+
+        <details class="service-acc" open>
+          <summary>
+            <span class="acc-title">Contabilidad financiera y analítica</span>
+            <span class="acc-icon">+</span>
+          </summary>
+          <div class="acc-body">
+            <p>No solo contabilidad financiera: también analítica, para saber qué parte de tu actividad es realmente rentable.</p>
+            <ul>
+              <li>Contabilidad analítica por proyecto o línea de negocio</li>
+              <li>Cierres mensuales y anuales</li>
+            </ul>
+          </div>
+        </details>
+
+        <details class="service-acc" open>
+          <summary>
+            <span class="acc-title">Subvenciones y ayudas</span>
+            <span class="acc-icon">+</span>
+          </summary>
+          <div class="acc-body">
+            <p>Kit Digital, bonificaciones de cuota y ayudas autonómicas: identificamos lo que te corresponde y gestionamos el expediente.</p>
+            <ul>
+              <li>Kit Digital</li>
+              <li>Ayudas autonómicas y estatales</li>
+              <li>Bonificaciones de cuota</li>
+            </ul>
+          </div>
+        </details>
+
+      </div>
+
+      <div class="service-group-panel" data-group="particulares" hidden>
+
+        <details class="service-acc" open>
+          <summary>
+            <span class="acc-title">Subvenciones y ayudas</span>
+            <span class="acc-icon">+</span>
+          </summary>
+          <div class="acc-body">
+            <p>Buscamos y tramitamos la ayuda que corresponde a tu situación.</p>
+            <ul>
+              <li>Vivienda, familia y dependencia</li>
+              <li>Becas y ayudas a la formación</li>
+            </ul>
+          </div>
+        </details>
+
+        <details class="service-acc" open>
+          <summary>
+            <span class="acc-title">Impuestos</span>
+            <span class="acc-icon">+</span>
+          </summary>
+          <div class="acc-body">
+            <p>Tu Declaración de la Renta, revisada y presentada sin sorpresas.</p>
+            <ul>
+              <li>Declaración de la Renta (IRPF)</li>
+              <li>Revisión de deducciones y bonificaciones aplicables</li>
+            </ul>
+          </div>
+        </details>
+
+        <details class="service-acc" open>
+          <summary>
+            <span class="acc-title">Hipotecas</span>
+            <span class="acc-icon">+</span>
+          </summary>
+          <div class="acc-body">
+            <p>Gestionamos tu hipoteca con nuestra red de contactos bancarios, buscando las condiciones más competitivas.</p>
+            <ul>
+              <li>Comparativa entre varios bancos colaboradores</li>
+              <li>Negociación de condiciones (tipo de interés, vinculaciones, comisiones)</li>
+              <li>Acompañamiento durante todo el proceso, de principio a fin</li>
+            </ul>
+          </div>
+        </details>
+
+        <details class="service-acc" open>
+          <summary>
+            <span class="acc-title">Patrimonio y familia</span>
+            <span class="acc-icon">+</span>
+          </summary>
+          <div class="acc-body">
+            <p>Decisiones que afectan a varias generaciones.</p>
+            <ul>
+              <li>Herencias</li>
+              <li>Cambios de régimen matrimonial</li>
+              <li>Donaciones y préstamos entre familiares</li>
+              <li>Planificación patrimonial y sucesoria</li>
+            </ul>
+          </div>
+        </details>
+
+      </div>
+    </section>
+  </div>
+
+  <!-- ===== ACTUALIDAD ===== -->
+  <div class="tab-panel" id="panel-actualidad" role="tabpanel" hidden>
+    <section style="padding-top:36px;">
+
+      <div id="actualidad-list">
+        <div class="section-head">
+          <h2>Actualidad</h2>
+          <p>Artículos sobre fiscalidad, subvenciones y gestión financiera, pensados para quien se plantea dar un paso importante. Iremos ampliando esta sección.</p>
+        </div>
+        <div class="article-grid">
+          <article class="article-card" data-article="decisiones-autonomo" tabindex="0" role="button">
+            <span class="tag-example">Guía</span>
+            <h4>Decisiones que tienes que tomar antes de hacerte autónomo</h4>
+            <p>Darse de alta es fácil. Elegir bien cómo y cuándo es lo que marca la diferencia en ayudas, cuota e impuestos.</p>
+            <span class="read-more">Leer artículo →</span>
+          </article>
+          <article class="article-card" data-article="cuota-cero" tabindex="0" role="button">
+            <span class="tag-example">Subvenciones</span>
+            <h4>Cuota Cero Ampliada en Murcia: qué es y quién puede pedirla</h4>
+            <p>Hasta 2.920 € de ayuda para nuevos autónomos en la Región de Murcia. Requisitos y plazo.</p>
+            <span class="read-more">Leer artículo →</span>
+          </article>
+          <article class="article-card" data-article="tarifa-plana" tabindex="0" role="button">
+            <span class="tag-example">Fiscalidad</span>
+            <h4>Tarifa plana de autónomos: todo lo que cambia este año</h4>
+            <p>Cuánto dura, quién puede acogerse y cómo se solicita la bonificación de cuota al darte de alta.</p>
+            <span class="read-more">Leer artículo →</span>
+          </article>
+          <article class="article-card" data-article="kit-digital" tabindex="0" role="button">
+            <span class="tag-example">Subvenciones</span>
+            <h4>Kit Digital: cómo aprovecharlo si acabas de empezar</h4>
+            <p>Requisitos de antigüedad, importes disponibles y qué herramientas puedes financiar.</p>
+            <span class="read-more">Leer artículo →</span>
+          </article>
+        </div>
+      </div>
+
+      <article class="article-full" id="article-decisiones-autonomo" hidden>
+        <button type="button" class="article-back">← Volver a Actualidad</button>
+        <span class="tag-example">Guía</span>
+        <h2>Decisiones que tienes que tomar antes de hacerte autónomo</h2>
+        <span class="article-updated">Actualizado · septiembre 2026</span>
+        <div class="article-body">
+          <p>Darse de alta como autónomo es, en lo administrativo, cuestión de un trámite. Lo que de verdad condiciona tu primer año -qué ayudas puedes pedir, cuánto pagas de cuota y cuánto te descuentas en la Renta- se decide antes, no después. Estas son las decisiones que conviene tener claras.</p>
+
+          <h3>1. Cómo sales de tu trabajo actual, si vienes de uno</h3>
+          <p>Si vas a compaginar la ida a autónomo con la salida de un empleo por cuenta ajena, la forma en que termine tu contrato condiciona buena parte de las ayudas a las que puedes acceder.</p>
+          <ul>
+            <li><strong>Baja voluntaria simple:</strong> no genera derecho a paro, salvo causas justificadas tasadas (movilidad geográfica forzosa, modificación sustancial de condiciones, impago o retraso de salarios, violencia de género). Esto cierra la puerta a la capitalización del paro.</li>
+            <li><strong>Despido o extinción pactada reconocida:</strong> si genera derecho a prestación por desempleo, abre la puerta a capitalizarla.</li>
+          </ul>
+          <p>Algunas ayudas autonómicas usan un requisito distinto y más laxo -estar "desempleado no ocupado" el día antes del alta-, que no siempre exige haber tenido derecho a paro. Conviene revisar la letra pequeña de cada convocatoria antes de descartar una ayuda solo por el tipo de baja.</p>
+
+          <h3>2. Capitalizar el paro (si tienes derecho)</h3>
+          <p>Si cobras prestación contributiva, puedes solicitar el pago único de lo que te queda pendiente. Requisitos principales: mínimo un año cotizado, conservar al menos 3 meses de prestación, no haberla capitalizado en los últimos 4 años y no haber compatibilizado paro y actividad autónoma en los últimos 2.</p>
+          <div class="note">La solicitud se hace ante el SEPE <strong>antes</strong> de darte de alta como autónomo, nunca después. Tras la concesión tienes 1 mes para iniciar la actividad y otro más para justificar la inversión con facturas.</div>
+
+          <h3>3. Pluriactividad: la vía prudente</h3>
+          <p>Puedes darte de alta como autónomo sin dejar tu empleo actual. Mantienes la tarifa plana estatal y la reducción del 20% en el IRPF, pero renuncias tanto a la capitalización del paro como a buena parte de las ayudas autonómicas ligadas a estar desempleado, porque en pluriactividad sigues "ocupado". Es la opción más segura cuando aún no tienes la cartera de clientes cerrada.</p>
+
+          <h3>4. La tarifa plana y otras bonificaciones de cuota</h3>
+          <p>80 €/mes durante los primeros 12 meses, prorrogable a otros 12 si tus rendimientos netos quedan por debajo del SMI. El importe es el mismo independientemente del mes del año en que te des de alta, así que esperar a enero no te ahorra cuota.</p>
+
+          <h3>5. La reducción del 20% en el IRPF</h3>
+          <p>Aplica en estimación directa durante los dos primeros ejercicios con rendimiento neto positivo, con un máximo de 100.000 €/año. No es una ayuda con solicitud aparte: se aplica directamente en la Declaración de la Renta. Ojo si más del 50% de tus ingresos del año vienen de un único cliente para el que ya trabajaste como asalariado el año anterior: en ese caso no se aplica.</p>
+
+          <h3>6. Ayudas autonómicas</h3>
+          <p>Además de las ayudas estatales, muchas comunidades tienen las suyas propias, con requisitos, importes y plazos distintos (en la Región de Murcia, por ejemplo, la Cuota Cero Ampliada). Conviene revisar la convocatoria vigente de tu comunidad antes de darte de alta, no después: algunas exigen solicitarse dentro del mes siguiente al alta.</p>
+
+          <h3>7. El Kit Digital, más adelante</h3>
+          <p>Si vas a necesitar herramientas de facturación, gestión o ciberseguridad, ten en cuenta que el Kit Digital exige un mínimo de 6 meses de antigüedad como autónomo: no está disponible el día del alta, pero sí merece la pena planificarlo desde el principio.</p>
+
+          <p>Cada una de estas decisiones tiene matices legales y fiscales que dependen de tu situación concreta -tu tipo de salida, tu comunidad autónoma, tus clientes previstos-. Revisarlos antes de darte de alta, con alguien que conozca tanto la parte fiscal como la laboral, suele salir más barato que corregirlos después.</p>
+        </div>
+      </article>
+
+      <article class="article-full" id="article-cuota-cero" hidden>
+        <button type="button" class="article-back">← Volver a Actualidad</button>
+        <span class="tag-example">Subvenciones</span>
+        <h2>Cuota Cero Ampliada en Murcia: qué es y quién puede pedirla</h2>
+        <span class="article-updated">Actualizado · septiembre 2026</span>
+        <div class="article-body">
+          <p>La Cuota Cero Ampliada es la ayuda autonómica de la Región de Murcia para quienes se dan de alta como autónomos por primera vez. Puede suponer hasta <strong>2.920 €</strong>: 1.000 € al inicio de la actividad más la cobertura de la cuota reducida (unos 80 €/mes) durante los dos primeros años completos.</p>
+
+          <h3>Requisitos principales</h3>
+          <ul>
+            <li>Alta como autónomo por primera vez, o llevar al menos 2 años inactivo.</li>
+            <li>Domicilio fiscal y actividad en la Región de Murcia.</li>
+            <li>Alta en el IAE y actividad a tiempo completo.</li>
+            <li>Estar al corriente de pagos con Hacienda y la Seguridad Social.</li>
+          </ul>
+          <p>Quedan excluidos los autónomos societarios, los colaboradores familiares, y quienes hayan recibido ayudas del SEF en los dos años anteriores.</p>
+
+          <h3>El requisito de "desempleado no ocupado"</h3>
+          <p>La convocatoria exige estar "desempleado no ocupado" al menos el día inmediatamente anterior al alta en RETA. Es un concepto distinto -y aparentemente más laxo- que la "situación legal de desempleo" que exige, por ejemplo, la capitalización del paro: no se exige expresamente cobrar prestación, solo no estar trabajando (por cuenta propia o ajena) el día antes.</p>
+          <div class="note">Esto no está confirmado de forma explícita en los textos oficiales disponibles. Antes de planificar tu salida de un empleo contando con esta ayuda, conviene una consulta directa y por escrito al SEF (968 362 000, o 012).</div>
+
+          <h3>Plazo</h3>
+          <p>La convocatoria vigente admite solicitudes hasta el <strong>15 de octubre de 2026</strong>, con un mes desde el alta en RETA para presentarla. Como todas las convocatorias de ayudas, conviene confirmar en la web oficial (autonomos.carm.es) que sigue abierta y con crédito disponible antes de planificar sobre ella.</p>
+
+          <p>La compatibilidad con la tarifa plana estatal o con la capitalización del paro no aparece confirmada de forma explícita en la normativa publicada -conviene revisarlo caso por caso antes de solicitarla.</p>
+        </div>
+      </article>
+
+      <article class="article-full" id="article-tarifa-plana" hidden>
+        <button type="button" class="article-back">← Volver a Actualidad</button>
+        <span class="tag-example">Fiscalidad</span>
+        <h2>Tarifa plana de autónomos: todo lo que cambia este año</h2>
+        <span class="article-updated">Actualizado · septiembre 2026</span>
+        <div class="article-body">
+          <p>La tarifa plana estatal reduce la cuota de autónomos a <strong>80 €/mes</strong> durante los primeros 12 meses de actividad, prorrogable a otros 12 (24 en total) si tus rendimientos netos quedan por debajo del Salario Mínimo Interprofesional. La prórroga se solicita en Importass, no es automática.</p>
+
+          <h3>Requisitos</h3>
+          <ul>
+            <li>Alta inicial en el RETA.</li>
+            <li>No haber estado de alta en el RETA en los 2 años anteriores (3 si ya disfrutaste de esta bonificación antes).</li>
+            <li>No ser autónomo colaborador.</li>
+            <li>Estar al corriente de pagos.</li>
+          </ul>
+
+          <h3>Cuándo darte de alta no cambia el importe</h3>
+          <p>La cuota de 80 €/mes es la misma independientemente del mes del año en que te des de alta: no hay ninguna ventaja de cuota por esperar a enero. Sí puede haber otras consideraciones -como el cierre del ejercicio fiscal o el plazo de alguna ayuda autonómica- que hagan preferible un momento u otro.</p>
+
+          <h3>Compatibilidades</h3>
+          <p>La tarifa plana es compatible con la capitalización del paro, con la pluriactividad y con la reducción del 20% en el IRPF por inicio de actividad. Se solicita en el propio momento del alta, sin necesidad de una gestión aparte.</p>
+        </div>
+      </article>
+
+      <article class="article-full" id="article-kit-digital" hidden>
+        <button type="button" class="article-back">← Volver a Actualidad</button>
+        <span class="tag-example">Subvenciones</span>
+        <h2>Kit Digital: cómo aprovecharlo si acabas de empezar</h2>
+        <span class="article-updated">Actualizado · septiembre 2026</span>
+        <div class="article-body">
+          <p>El Kit Digital es la ayuda estatal (con fondos europeos) para digitalizar negocios. Para autónomos y negocios de hasta 2 empleados (Segmento III), el bono puede alcanzar hasta <strong>2.000 €</strong>, destinados a herramientas como facturación electrónica, gestión del negocio o ciberseguridad.</p>
+
+          <h3>La condición que se pasa por alto al empezar</h3>
+          <p>El Kit Digital exige un mínimo de <strong>6 meses de antigüedad</strong> como autónomo. No está disponible el día del alta, así que no es una ayuda con la que contar para arrancar, sino para planificar a medio plazo.</p>
+
+          <h3>Cómo funciona</h3>
+          <p>No tiene una convocatoria con fecha fija única: funciona bajo demanda hasta agotar los fondos de cada convocatoria, a través de Acelera Pyme / Red.es. Conviene estar atento a cuándo se abre la convocatoria que te corresponde según tu segmento.</p>
+
+          <h3>Qué hacer mientras tanto</h3>
+          <p>En tus primeros meses, céntrate en las herramientas imprescindibles para operar. A partir del sexto mes, revisa si te interesa solicitar el Kit Digital para cubrir lo que hayas ido necesitando -facturación, gestión documental, ciberseguridad- en lugar de pagarlo de tu bolsillo desde el principio.</p>
+        </div>
+      </article>
+
+    </section>
+  </div>
+
+  <!-- ===== CONTACTO ===== -->
+  <div class="tab-panel" id="panel-contacto" role="tabpanel" hidden>
+    <section class="contact" style="border-radius:18px; margin-top:32px;">
+      <div class="contact-grid" style="padding:36px;">
+        <div class="contact-copy">
+          <div class="section-head" style="margin-bottom:0;">
+            <h2>Hablemos</h2>
+            <p>Cuéntanos en qué punto estás y qué necesitas resolver.</p>
+          </div>
+          <p style="margin-top:10px; font-size:0.9rem;">Al otro lado siempre está el mismo interlocutor - sin departamentos ni intermediarios.</p>
+          <div class="placeholder-list">
+            <a class="placeholder" href="mailto:jcorreas.info@gmail.com">
+              <span class="placeholder-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 6h18v12H3z"/><path d="M3 7l9 6 9-6"/></svg></span>
+              <span class="placeholder-text"><span class="label">Email</span><span class="pv-value">jcorreas.info@gmail.com</span></span>
+            </a>
+            <div class="placeholder">
+              <span class="placeholder-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s7-6.3 7-11.5A7 7 0 0 0 5 9.5C5 14.7 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg></span>
+              <span class="placeholder-text"><span class="label">Ubicación</span><span class="pv-value">Murcia · también online</span></span>
+            </div>
+          </div>
+          <div class="contact-brand">
+            <div class="brand-line">
+              <img class="logo-mark" src="data:image/png;base64,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" alt="JCorreas">
+              <span class="logo-text"><span class="accent">J</span><span class="main">Correas</span></span>
+            </div>
+            <p>JCorreas - banca, consultoría financiera y dirección financiera, ahora al servicio de empresas, autónomos y particulares.</p>
+          </div>
+        </div>
+        <div class="form-card">
+          <div class="cap">Formulario de contacto</div>
+          <form id="contact-form">
+            <div class="field"><label for="f-nombre">Nombre</label><input id="f-nombre" type="text" placeholder="Tu nombre" required></div>
+            <div class="field"><label for="f-email">Email</label><input id="f-email" type="email" placeholder="tu@email.com" required></div>
+            <div class="field"><label for="f-telefono">Teléfono</label><input id="f-telefono" type="tel" placeholder="Tu teléfono (opcional)"></div>
+            <div class="field">
+              <label for="f-motivo">Motivo de consulta</label>
+              <select id="f-motivo">
+                <option>Dirección financiera / controller</option>
+                <option>Subvenciones y ayudas</option>
+                <option>Licitaciones y coordinación de proyectos</option>
+                <option>Asesoría para autónomos</option>
+                <option>Impuestos</option>
+                <option>Hipotecas</option>
+                <option>Contabilidad financiera y analítica</option>
+                <option>Patrimonio y familia</option>
+                <option>Otro</option>
+              </select>
+            </div>
+            <div class="field"><label for="f-mensaje">Mensaje</label><textarea id="f-mensaje" placeholder="Cuéntanos brevemente tu situación..." required></textarea></div>
+            <input type="checkbox" name="botcheck" style="display:none" tabindex="-1" autocomplete="off">
+            <p style="font-size:0.78rem; color:var(--ink-soft); margin:2px 0 14px; line-height:1.4;">Responsable: Juan Alberto Correas. Finalidad: responder a tu consulta. Tus datos no se ceden a terceros ni se usan con otro fin. Puedes ejercer tus derechos de acceso, rectificación y supresión escribiendo a <a href="mailto:jcorreas.info@gmail.com" style="color:var(--primary);">jcorreas.info@gmail.com</a>.</p>
+            <button type="submit" class="btn" style="width:100%; justify-content:center;" id="contact-submit-btn">Enviar consulta</button>
+          </form>
+          <div class="form-note" id="contact-note">Tu consulta llega directamente a nuestro correo, sin pasos intermedios.</div>
+          <div class="form-note" id="contact-status" hidden style="margin-top:8px; font-weight:600;"></div>
+        </div>
+      </div>
+    </section>
+  </div>
+
+</main>
+
+<footer>
+  <div class="wrap foot-row">
+    <div class="brand-line">
+      <img class="logo-mark" src="data:image/png;base64,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" alt="JCorreas">
+      <span class="logo-text"><span class="accent">J</span><span class="main">Correas</span></span>
+    </div>
+    <span>&copy; 2026 JCorreas. Todos los derechos reservados.</span>
+  </div>
+</footer>
+
+<script>
+  (function(){
+    var buttons = document.querySelectorAll('[data-tab]');
+    var panels = {
+      inicio: document.getElementById('panel-inicio'),
+      nosotros: document.getElementById('panel-nosotros'),
+      servicios: document.getElementById('panel-servicios'),
+      actualidad: document.getElementById('panel-actualidad'),
+      contacto: document.getElementById('panel-contacto')
+    };
+    var tabButtons = document.querySelectorAll('.tab-nav button');
+
+    function activate(name, updateHash){
+      Object.keys(panels).forEach(function(key){
+        panels[key].hidden = key !== name;
+      });
+      tabButtons.forEach(function(btn){
+        btn.setAttribute('aria-selected', btn.getAttribute('data-tab') === name ? 'true' : 'false');
+      });
+      if (updateHash !== false) {
+        history.replaceState(null, '', '#' + name);
+      }
+      window.scrollTo({ top: 0, behavior: 'instant' in window ? 'instant' : 'auto' });
+    }
+
+    buttons.forEach(function(btn){
+      btn.addEventListener('click', function(){
+        activate(btn.getAttribute('data-tab'));
+      });
+    });
+
+    var initial = (location.hash || '').replace('#', '');
+    if (!panels[initial]) initial = 'inicio';
+    activate(initial, false);
+
+    // Servicios: selector de perfil (Empresas / Autónomos / Particulares) -
+    // solo se muestra el panel del perfil elegido, los otros dos quedan ocultos.
+    var serviceSwitchButtons = document.querySelectorAll('.services-switch [data-service-group]');
+    var serviceGroupPanels = document.querySelectorAll('.service-group-panel[data-group]');
+    function activateServiceGroup(name){
+      serviceGroupPanels.forEach(function(panel){
+        var isActive = panel.getAttribute('data-group') === name;
+        panel.hidden = !isActive;
+        if (isActive){
+          panel.querySelectorAll('details.service-acc').forEach(function(acc){ acc.open = true; });
+        }
+      });
+      serviceSwitchButtons.forEach(function(btn){
+        btn.setAttribute('aria-selected', btn.getAttribute('data-service-group') === name ? 'true' : 'false');
+      });
+    }
+    serviceSwitchButtons.forEach(function(btn){
+      btn.addEventListener('click', function(){
+        activateServiceGroup(btn.getAttribute('data-service-group'));
+      });
+    });
+    activateServiceGroup('empresas');
+
+    // Actualidad: las tarjetas abren el artículo completo (oculta el listado,
+    // muestra el artículo) y el botón "Volver" hace el camino inverso.
+    var actualidadList = document.getElementById('actualidad-list');
+    var articleCards = document.querySelectorAll('.article-card[data-article]');
+    var articleFulls = document.querySelectorAll('.article-full');
+
+    function openArticle(slug){
+      var target = document.getElementById('article-' + slug);
+      if (!target) return;
+      if (actualidadList) actualidadList.hidden = true;
+      articleFulls.forEach(function(art){ art.hidden = (art !== target); });
+      window.scrollTo({ top: 0, behavior: 'instant' in window ? 'instant' : 'auto' });
+    }
+
+    function closeArticle(){
+      articleFulls.forEach(function(art){ art.hidden = true; });
+      if (actualidadList) actualidadList.hidden = false;
+      window.scrollTo({ top: 0, behavior: 'instant' in window ? 'instant' : 'auto' });
+    }
+
+    articleCards.forEach(function(card){
+      card.addEventListener('click', function(){
+        openArticle(card.getAttribute('data-article'));
+      });
+      card.addEventListener('keydown', function(e){
+        if (e.key === 'Enter' || e.key === ' ') {
+          e.preventDefault();
+          openArticle(card.getAttribute('data-article'));
+        }
+      });
+    });
+
+    document.querySelectorAll('.article-back').forEach(function(btn){
+      btn.addEventListener('click', closeArticle);
+    });
+
+    // Si cambiamos de pestaña mientras un artículo está abierto, al volver a
+    // Actualidad mostramos siempre el listado.
+    document.querySelectorAll('[data-tab="actualidad"]').forEach(function(btn){
+      btn.addEventListener('click', closeArticle);
+    });
+
+    // Contacto: al enviar, el mensaje se guarda en Supabase y dispara el
+    // envío de dos emails a través de Resend, mediante una Supabase Edge
+    // Function:
+    //   1) un aviso para JCorreas con los datos de la consulta
+    //   2) una confirmación automática para la persona que ha escrito
+    //
+    // *** PENDIENTE DE RELLENAR *** (ver SETUP.md): sustituir estos dos
+    // valores por los de tu proyecto de Supabase (Project URL y anon key,
+    // ambos públicos y pensados para usarse en el navegador - no son
+    // secretos, la seguridad real la pone la Edge Function + RLS).
+    var SUPABASE_FUNCTION_URL = 'https://TU-PROYECTO.supabase.co/functions/v1/contact-form';
+    var SUPABASE_ANON_KEY = 'TU-ANON-KEY';
+
+    var contactForm = document.getElementById('contact-form');
+    if (contactForm) {
+      contactForm.addEventListener('submit', function(e){
+        e.preventDefault();
+        var nombre = document.getElementById('f-nombre').value.trim();
+        var email = document.getElementById('f-email').value.trim();
+        var telefono = document.getElementById('f-telefono').value.trim();
+        var motivo = document.getElementById('f-motivo').value;
+        var mensaje = document.getElementById('f-mensaje').value.trim();
+        var botcheck = contactForm.querySelector('[name="botcheck"]');
+        var statusEl = document.getElementById('contact-status');
+        var noteEl = document.getElementById('contact-note');
+        var btn = document.getElementById('contact-submit-btn');
+
+        if (botcheck && botcheck.checked) { return; } // relleno por un bot
+
+        var payload = {
+          nombre: nombre,
+          email: email,
+          telefono: telefono || 'No facilitado',
+          motivo: motivo,
+          mensaje: mensaje
+        };
+
+        btn.disabled = true;
+        btn.textContent = 'Enviando...';
+        if (noteEl) { noteEl.hidden = true; }
+        statusEl.hidden = true;
+
+        fetch(SUPABASE_FUNCTION_URL, {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+            'Authorization': 'Bearer ' + SUPABASE_ANON_KEY
+          },
+          body: JSON.stringify(payload)
+        })
+          .then(function(res){
+            return res.json().then(function(data){ return { ok: res.ok, data: data }; });
+          })
+          .then(function(result){
+            btn.disabled = false;
+            btn.textContent = 'Enviar consulta';
+            statusEl.hidden = false;
+            if (result.ok && result.data && result.data.success) {
+              statusEl.style.color = 'var(--primary)';
+              statusEl.textContent = 'Gracias, hemos recibido tu consulta. Te responderemos lo antes posible.';
+              contactForm.reset();
+            } else {
+              statusEl.style.color = '#B3261E';
+              statusEl.textContent = 'No se ha podido enviar. Escríbenos directamente a jcorreas.info@gmail.com.';
+              if (noteEl) { noteEl.hidden = false; }
+            }
+          })
+          .catch(function(){
+            btn.disabled = false;
+            btn.textContent = 'Enviar consulta';
+            statusEl.hidden = false;
+            statusEl.style.color = '#B3261E';
+            statusEl.textContent = 'No se ha podido enviar. Escríbenos directamente a jcorreas.info@gmail.com.';
+            if (noteEl) { noteEl.hidden = false; }
+          });
+      });
+    }
+  })();
+</script>
+
+</body>
+</html>
