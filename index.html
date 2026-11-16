@@ -171,6 +171,14 @@
   .hero h1 em{font-style:normal; color:var(--primary);}
   .hero p.lead{margin-top:20px; font-size:1.1rem; color:var(--ink-soft); text-align:justify;}
   .hero .actions{margin-top:30px; display:flex; gap:14px; flex-wrap:wrap;}
+  .hero-tags{margin-top:20px; display:flex; flex-wrap:wrap; gap:8px;}
+  .hero-tag{
+    font-family:'IBM Plex Sans', sans-serif; font-size:0.84rem; font-weight:600;
+    color:var(--primary-dark); background:var(--primary-tint); border:1px solid var(--accent);
+    border-radius:999px; padding:7px 15px; cursor:pointer;
+    transition:background .15s, color .15s, transform .15s;
+  }
+  .hero-tag:hover{background:var(--primary); color:#fff; transform:translateY(-1px);}
 
   .hero-card{
     background:var(--surface); border:1px solid var(--line); border-radius:16px;
@@ -464,7 +472,14 @@
       <div>
         <span class="eyebrow">Consultoría financiera y fiscal</span>
         <h1>Números claros para decisiones que <em>no admiten letra pequeña.</em></h1>
-        <p class="lead">Experiencia en banca, consultoría financiera y dirección financiera, ahora al servicio de empresas, autónomos y particulares. No somos una asesoría ni una gestoría: somos un equipo altamente cualificado que ofrece un servicio 360º completamente personalizado.</p>
+        <p class="lead">Dirección financiera, subvenciones, impuestos, hipotecas o herencias: sea cual sea tu necesidad, la resolvemos con la misma experiencia en banca y consultoría financiera que ponemos al servicio de empresas, autónomos y particulares. No somos una asesoría ni una gestoría: somos un equipo altamente cualificado que ofrece un servicio 360º completamente personalizado.</p>
+        <div class="hero-tags">
+          <button type="button" class="hero-tag" data-tab="servicios" data-service-group="empresas">Dirección financiera</button>
+          <button type="button" class="hero-tag" data-tab="servicios">Subvenciones</button>
+          <button type="button" class="hero-tag" data-tab="servicios" data-service-group="autonomos">Impuestos</button>
+          <button type="button" class="hero-tag" data-tab="servicios" data-service-group="particulares">Hipotecas</button>
+          <button type="button" class="hero-tag" data-tab="servicios" data-service-group="particulares">Herencias</button>
+        </div>
         <div class="actions">
           <button type="button" class="btn" data-tab="contacto">Cuéntanos tu caso</button>
           <button type="button" class="btn ghost" data-tab="servicios">Ver servicios</button>
@@ -555,7 +570,7 @@
           </div>
           <div class="mini-card">
             <div class="mini-head"><h4>Hipotecas</h4></div>
-            <p>Movemos tu hipoteca entre nuestra red de bancos colaboradores para conseguirte mejores condiciones.</p>
+            <p>Te acompañamos a pedir tu hipoteca: preparamos la solicitud contigo y te explicamos cada oferta.</p>
           </div>
           <div class="mini-card">
             <div class="mini-head"><h4>Patrimonio y familia</h4></div>
@@ -851,10 +866,10 @@
             <span class="acc-icon">+</span>
           </summary>
           <div class="acc-body">
-            <p>Gestionamos tu hipoteca con nuestra red de contactos bancarios, buscando las condiciones más competitivas.</p>
+            <p>Te acompañamos en todo el proceso de solicitud de tu hipoteca, para que entiendas cada paso y cada oferta antes de firmar.</p>
             <ul>
-              <li>Comparativa entre varios bancos colaboradores</li>
-              <li>Negociación de condiciones (tipo de interés, vinculaciones, comisiones)</li>
+              <li>Preparación y revisión de la documentación para la solicitud</li>
+              <li>Explicación y comparación de las condiciones de las ofertas que recibas (tipo de interés, vinculaciones, comisiones)</li>
               <li>Acompañamiento durante todo el proceso, de principio a fin</li>
             </ul>
           </div>
@@ -1134,6 +1149,8 @@
     buttons.forEach(function(btn){
       btn.addEventListener('click', function(){
         activate(btn.getAttribute('data-tab'));
+        var group = btn.getAttribute('data-service-group');
+        if (group) activateServiceGroup(group);
       });
     });
 
